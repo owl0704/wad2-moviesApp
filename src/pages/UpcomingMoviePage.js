@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import StubAPI from "../api/stubAPI";
+import { getUpcomingMoviePage } from "../api/tmdb-api";
 import PageTemplate from '../components/templateMovieListPage'
-import { getMovies } from "../api/tmdb-api";
+import { Link, Route, withRouter } from "react-router-dom";
 
-const MovieListPage = () => {
-  const [movies, setMovies] = useState([]);
-  useEffect(() => {
-    getMovies().then(movies => {
-      setMovies(movies);
-    });
-  }, []);
+const UpcomingMoviePage = () => {
+    const [movies, setMovies] = useState([]);
+    useEffect(() => {
+        getUpcomingMoviePage().then(movies => {
+        setMovies(movies);
+      });
+    }, []);
 
   const addToFavorites = movieId => {
     setMovies(movies => {
@@ -30,4 +31,4 @@ const MovieListPage = () => {
   );
 };
 
-export default MovieListPage;
+export default UpcomingMoviePage;
