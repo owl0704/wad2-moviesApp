@@ -47,7 +47,7 @@ describe("Navigation", () => {
       cy.get("h2").contains("No. Movies");
     });
   });
-  describe("From the Movie Details page ", () => {
+  /*describe("From the Movie Details page ", () => {
     beforeEach(() => {
       cy.visit(`/movies/${movieId}`);
     });
@@ -63,7 +63,7 @@ describe("Navigation", () => {
         cy.contains("Full Review").click();
       cy.url().should("not.include", `/movies/5f69e4d0cee2f6003633becf`);
     });
-  });
+  });*/
   describe("From the Favorites page", () => {
     beforeEach(() => {
       cy.visit("/");
