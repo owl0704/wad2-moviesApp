@@ -64,7 +64,7 @@ test_jobX:
     - echo "test job X"
 
 exercise_job:
-  stage: before test after job
+  stage: before test after build
   only:
     - master
   script:
