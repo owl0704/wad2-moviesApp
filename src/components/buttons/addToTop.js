@@ -1,21 +1,21 @@
 import React, { useContext } from "react";
 import {MoviesContext} from "../../contexts/moviesContext";
 
-const AddToFavoriteButton = ({ movie }) => {
+const AddToTopButton = ({ movie }) => {
   const context = useContext(MoviesContext);
-  const handleAddToFavorite = e => {
+  const handleAddToTop = e => {
     e.preventDefault();
-    context.addToFavorites(movie.id);
+    context.addToTop(movie.id);
   };
   return (
     <button
       type="button"
       className="btn w-100 btn-primary"
-      onClick={handleAddToFavorite}
+      onClick={handleAddToTop}
     >
       Add to Favorites
     </button>
   );
 };
 
-export default AddToFavoriteButton;
+export default AddToTopButton;

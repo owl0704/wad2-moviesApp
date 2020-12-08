@@ -47,10 +47,15 @@ const SiteHeader = () => {
               Top
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/movies/Now_playing">
+              Now Playing
+            </Link>
+          </li>
         </ul>
       </nav>
     </nav>
   );
 };
 
-export default SiteHeader;
+export default SiteHeader; 
