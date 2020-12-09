@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import MovieListPageTemplate from "../components/templateMovieListPage";
+import MovieListPageTemplate2 from "../components/templateMovieListPage2";
 import AddReviewButton from '../components/buttons/addReview'
 import {MoviesContext} from '../contexts/moviesContext'
 
@@ -9,12 +9,15 @@ const FavoriteMoviesPage = props => {
   const top = context.Top_rated.filter( m => m.favorite )
   const totalF = [...favorites,...top]
   return (
-    <MovieListPageTemplate
+    <MovieListPageTemplate2
       movies={totalF}
       title={"Favorite Movies"}
       action={movie => <AddReviewButton movie={movie} />}
+      
     />
   );
 };
+
+
 
 export default FavoriteMoviesPage;

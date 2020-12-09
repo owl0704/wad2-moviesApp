@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PageTemplate from '../components/templateMovieListPage'
 import {MoviesContext} from '../contexts/moviesContext'
-import AddToTopButton from "../components/buttons/addToTop";
+import AddToFavouriteButton from "../components/buttons/addToFavorites";
 
 const Top_ratedMoviePage = () => {
     const context = useContext(MoviesContext);
@@ -12,7 +12,7 @@ const Top_ratedMoviePage = () => {
       <PageTemplate
         title='Top Rated Movies'
         movies={movies}
-        action={movie => <AddToTopButton movie={movie} />}
+        action={movie => <AddToFavouriteButton movie={movie} />}
       />
   );
 };
