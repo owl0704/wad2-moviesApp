@@ -34,13 +34,14 @@ const MoviePage = props => {
             )}
           </div>
         </div>
+        
         <Route
           path={`/movies/:id/reviews`}
           render={props => <MovieReviews movie={movie} {...props} />}
         />
         <div style={{marginTop:10}}><Link
                 className="btn btn-primary btn-block active"
-                to={`/movies/${id}/reviews`}
+                to={{pathname :`/movies/${movie.id}/movieCredits`}}
               >
                 Show Credits
               </Link></div>
