@@ -7,6 +7,8 @@ const AddToFavoriteButton = ({ movie }) => {
     e.preventDefault();
     context.addToFavorites(movie.id);
   };
+  // movie -> fa
+  // top 
   return (
     <button
       type="button"
