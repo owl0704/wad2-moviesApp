@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { getMovieCredits } from "../../api/tmdb-api";
-import { Link } from "react-router-dom";
 
 export default ({ movie }) => {
   const [cast, setCast] = useState([]);
   useEffect(() => {
     getMovieCredits(movie.id).then(credits => {
-      //setCast(credits.cast);
+      setCast(credits.cast);
     }); 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-    <table className="table table-hover table-striped">
+    <table className="table">
       <thead>
         <tr>
           <th>Cast name</th>
           <th>Character</th>
-          <th>Operation</th>
         </tr>
       </thead>
       <tbody>
@@ -26,13 +24,6 @@ export default ({ movie }) => {
           <tr key={c.id}>
             <td>{c.name}</td>
             <td>{c.character}</td>
-            <td>
-              <Link to={{
-                  pathname: `/credit/${c.credit_id}`
-                }}>
-                  Details
-              </Link>
-            </td>
           </tr>
         ))}
       </tbody>

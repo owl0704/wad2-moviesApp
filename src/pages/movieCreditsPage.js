@@ -1,5 +1,4 @@
 import React from "react";
-import PageTemplate from "../components/templateMoviePage";
 import MovieCredits from "../components/movieCredits";
 import useMovie from "../hooks/useMovie";
 
@@ -12,9 +11,7 @@ const movieCredits = props => {
     <>
     {movie ? (
       <>
-      <PageTemplate movie={movie}>
         <MovieCredits movie={movie} /> 
-      </PageTemplate>
       </>
       ) : (
         <p>Waiting for movie details</p>
