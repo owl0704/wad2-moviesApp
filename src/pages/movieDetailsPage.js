@@ -45,6 +45,12 @@ const MoviePage = props => {
               >
                 Show Credits
               </Link></div>
+              <div style={{marginTop:10}}><Link
+                className="btn btn-primary btn-block active"
+                to={{pathname :`/${movie.id}/similar`}}
+              >
+                Show similar movies
+              </Link></div>      
       </>
     ) : (
       <p>Waiting for movie details</p>

@@ -13,7 +13,7 @@ import FavoriteMoviesPage from './pages/favoritesMoviesPage'
 import MoviesContextProvider from "./contexts/moviesContext";  
 import GenresContextProvider from "./contexts/genresContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage'
-
+import SimilarMoviesPage from './pages/similarMoviesPage'
 const App = () => {
   return (
    <BrowserRouter>
@@ -23,6 +23,7 @@ const App = () => {
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>    {/* NEW */}
             <Switch> 
+            <Route path="/:id/similar"component={SimilarMoviesPage} />
             <Route path="/movies/Now_playing" component={Now_playingMoviePage} />   
             <Route exact path="/reviews/form" component={AddMovieReviewPage} />
           <Route path="/reviews/:id" component={MovieReviewPage} />
