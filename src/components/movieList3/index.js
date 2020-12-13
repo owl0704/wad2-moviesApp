@@ -1,6 +1,6 @@
 import React from "react";
 import Movie from "../movieCard3";
-import "./movieList.css";
+import "./movieList3.css";
 
 const MovieList3 = ({movies, action}) => {
   const movieCards = movies.map(m => (
