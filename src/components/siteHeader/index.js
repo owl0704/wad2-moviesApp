@@ -53,6 +53,12 @@ const SiteHeader = () => {
             </Link>
             </Button>
           </li>
+          <li className="nav-item">
+            <Button ghost><Link className="nav-link text-white" to="/people">
+              credits
+            </Link>
+            </Button>
+          </li>
           
         </ul>
       </nav>

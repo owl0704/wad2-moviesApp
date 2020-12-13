@@ -14,6 +14,10 @@ import MoviesContextProvider from "./contexts/moviesContext";
 import GenresContextProvider from "./contexts/genresContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage'
 import SimilarMoviesPage from './pages/similarMoviesPage'
+import PeoplePage from './pages/peoplePage'
+import PeopleDetailsPage from './pages/peopleDetailsPage'
+import PeoplesContextProvider from "./contexts/peoplesContext";
+
 const App = () => {
   return (
    <BrowserRouter>
@@ -21,8 +25,13 @@ const App = () => {
         <SiteHeader /> 
         <div className="container-fluid">
           <MoviesContextProvider>     {/* NEW  */}
+          <PeoplesContextProvider>{/* NEW  */}
+
           <GenresContextProvider>    {/* NEW */}
+        
             <Switch> 
+            <Route exact path="/people" component={PeoplePage} />
+            <Route exact path="/people/:id" component={PeopleDetailsPage} />
             <Route path="/:id/similar"component={SimilarMoviesPage} />
             <Route path="/movies/Now_playing" component={Now_playingMoviePage} />   
             <Route exact path="/reviews/form" component={AddMovieReviewPage} />
@@ -34,7 +43,10 @@ const App = () => {
           <Route path="/" component={HomePage} />
           <Redirect from="*" to="/" />
           </Switch>
+         
+          
           </GenresContextProvider>    {/* NEW */}
+          </PeoplesContextProvider>
           </MoviesContextProvider>     {/* NEW */}
         </div>
       </div>
