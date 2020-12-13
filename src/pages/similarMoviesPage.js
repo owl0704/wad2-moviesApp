@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import PageTemplate from "../components/templateMovieListPage3";
-
 import { getSimilarMovies } from "../api/tmdb-api";
 import AddToFavoritesButton from '../components/buttons/addToFavorites'
 
@@ -16,7 +15,9 @@ const SimilarMoviesPage = props => {
     });
    
   }, []);
+  
   return (
+    
     <PageTemplate 
       title= {`Similar Movies`}
       movies={similarMovies}

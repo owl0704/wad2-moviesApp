@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../headerMovieList";
 import MovieList from "../movieList3";
-import FilterControls from "../filterControls";
+
 
 const MovieListPageTemplate3 = ({ movies, title, action }) => {
   const [nameFilter, setNameFilter] = useState("");
@@ -25,7 +25,7 @@ const MovieListPageTemplate3 = ({ movies, title, action }) => {
   return (
     <>
       <Header title={title} numMovies={displayedMovies.length} />
-      <FilterControls onUserInput={handleChange} numMovies={displayedMovies.length}/>
+      
       <MovieList
        action={action}
        movies={displayedMovies}
