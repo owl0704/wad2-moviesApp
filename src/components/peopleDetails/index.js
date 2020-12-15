@@ -13,12 +13,7 @@ export default ({ people }) => {
         <li key="bdt" className="list-group-item ">
           {people.birthday}
         </li>
-        <li key="gdh" className="list-group-item list-group-item-dark">
-          Gender
-        </li>
-        <li key="gdv" className="list-group-item ">
-          {people.gender === 1 ? "female" : "male"}
-        </li>
+        
       </ul>
 
       <ul className="list-group list-group-horizontal">
