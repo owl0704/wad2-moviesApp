@@ -4,8 +4,8 @@ import MovieList from "../movieList3";
 
 
 const MovieListPageTemplate3 = ({ movies, title, action }) => {
-  const [nameFilter, setNameFilter] = useState("");
-  const [genreFilter, setGenreFilter] = useState("0");
+  const [nameFilter ] = useState("");
+  const [genreFilter] = useState("0");
   const genre = Number(genreFilter)
   let displayedMovies = movies
     .filter(m => {
@@ -17,11 +17,7 @@ const MovieListPageTemplate3 = ({ movies, title, action }) => {
         : true;
     });
 
-  const handleChange = (type, value) => {
-    if (type === "name") setNameFilter(value);
-    else setGenreFilter(value);
-  };
-
+  
   return (
     <>
       <Header title={title} numMovies={displayedMovies.length} />

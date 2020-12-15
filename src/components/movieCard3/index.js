@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./movieCard3.css";
 import "../../globals/fontawesome";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MovieCard = ({movie, action}) => {
 

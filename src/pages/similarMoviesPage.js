@@ -14,7 +14,7 @@ const SimilarMoviesPage = props => {
       setSimilarMovies(similarMovies);
     });
    
-  }, []);
+  }, [id]);
   
   return (
     

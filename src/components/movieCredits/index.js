@@ -8,7 +8,7 @@ export default ({ movie }) => {
     getMovieCredits(movie.id).then(credits => {
       setCast(credits.cast);
     }); 
-  }, []);
+  }, [movie.id]);
 
   return (
     <>

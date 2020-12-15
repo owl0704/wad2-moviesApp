@@ -7,17 +7,7 @@ const TemplatePeoplePage = ({ people, children }) => {
         <>
             <PeopleHeader people={people} />
             <div className="row">
-                <div className="col-3">
-                    <img
-                        src={
-                            people.profile_path
-                                ? `https://image.tmdb.org/t/p/w300/${people.profile_path}`
-                                : "./film-poster-placeholder.png"
-                        }
-                        className="people"
-                        alt={people.name}
-                    />
-                </div>
+                
                 <div className="col-9">{children}</div>
             </div>
         </>
