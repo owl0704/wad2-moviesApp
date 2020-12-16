@@ -1,5 +1,3 @@
-
-
 .wrap1{
   margin-right:  16px;
   margin-top: 16px;
@@ -11,6 +9,8 @@
   border-radius: 5px;
   overflow: hidden;
 }
+
+
 
 .title{
   font-weight: bolder;
@@ -25,34 +25,4 @@
 .info .key{
   font-weight: bolder;
   margin-top: 12px;
-}
-.wrap2 .name{
-    font-weight: bolder;
-    font-size: 22px;
-    margin-top: 10px;
-}
-
-.wrap2 .title{
-    font-weight: bolder;
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.known{
-    margin-bottom: 10px;
-}
-
-
-.card1{
-    
-    width: 150px;
-    height: 250px;
-    
-   
-    display: inline-block;
-    margin-right: 12px;
-}
-.card1 img{
-    height: 200px;
-    width: 100%;
 }

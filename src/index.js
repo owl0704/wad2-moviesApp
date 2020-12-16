@@ -1,28 +1,31 @@
 import SiteHeader from './components/siteHeader'
 import MovieReviewPage from "./pages/movieReviewPage";
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch} from "react-router-dom" 
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import HomePage from "./pages/homePage";
-import UpcomingMoviePage from "./pages/UpcomingMoviePage";
-import MovieCreditsPage from "./pages/movieCreditsPage";
-import Now_playingMoviePage from "./pages/Now_playingMoviePage";
-import MoviePage from './pages/movieDetailsPage'
-import FavoriteMoviesPage from './pages/favoritesMoviesPage' 
+
+import "bootstrap/dist/css/bootstrap.min.css"
+import PeoplesContextProvider from "./contexts/peoplesContext";
+import AuthProvider from "./contexts/authContext"
 import MoviesContextProvider from "./contexts/moviesContext";  
 import GenresContextProvider from "./contexts/genresContext";
-import AddMovieReviewPage from './pages/addMovieReviewPage'
-import SimilarMoviesPage from './pages/similarMoviesPage'
-import PeoplePage from './pages/peoplePage'
-import PeopleDetailsPage from './pages/peopleDetailsPage'
-import PeoplesContextProvider from "./contexts/peoplesContext";
-import "bootstrap/dist/css/bootstrap.min.css"
-import AuthProvider from "./contexts/authContext"
-import signUpPage from "./pages/signUpPage";
-import loginPage from "./pages/loginPage";
-import userPage from "./pages/userPage";
-import PrivateRoute from "./components/privateRoute"
+
+const HomePage=lazy(()=> import( "./pages/homePage"));
+const UpcomingMoviePage =lazy(()=> import( "./pages/UpcomingMoviePage"));
+const MovieCreditsPage =lazy(()=> import( "./pages/movieCreditsPage"));
+const Now_playingMoviePage =lazy(()=> import( "./pages/Now_playingMoviePage"));
+const MoviePage =lazy(()=> import('./pages/movieDetailsPage'));
+const FavoriteMoviesPage =lazy(()=> import( './pages/favoritesMoviesPage')); 
+const AddMovieReviewPage =lazy(()=> import( './pages/addMovieReviewPage'));
+const SimilarMoviesPage =lazy(()=> import( './pages/similarMoviesPage'));
+const PeoplePage =lazy(()=> import( './pages/peoplePage'));
+const PeopleDetailsPage =lazy(()=> import( './pages/peopleDetailsPage'));
+const signUpPage =lazy(()=> import( "./pages/signUpPage"));
+const loginPage =lazy(()=> import( "./pages/loginPage"));
+const userPage =lazy(()=> import( "./pages/userPage"));
+const PrivateRoute =lazy(()=> import( "./components/privateRoute"));
+
 const App = () => {
   return (
    <BrowserRouter>
@@ -62,4 +65,8 @@ const App = () => {
     );
 };
 
-ReactDOM.render(<App />, document.getElementById("root")); 
+ReactDOM.render(
+  <suspense fallback={<h3>loading...</h3>}>
+<App/>
+  </suspense>,
+document,getElementById("root"));
