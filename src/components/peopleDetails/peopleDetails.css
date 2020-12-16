@@ -1,28 +1,4 @@
-.wrap1{
-  margin-right:  16px;
-  margin-top: 16px;
-}
-
-.wrap1 img{
-  height: 450px;
-  width: 30%;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-
-
-.title{
-  font-weight: bolder;
-  font-size: 22px;
-  margin-top: 10px;
-}
-
-.info li{
-  list-style-type: none;
-}
-
-.info .key{
-  font-weight: bolder;
-  margin-top: 12px;
+.list-group-item {
+  padding: 2px;
+  margin-top: 5px;
 }
