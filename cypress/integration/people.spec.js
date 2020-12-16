@@ -13,7 +13,7 @@ describe('people page', () => {
 
     beforeEach(() => {
         cy.visit("/");
-        cy.get("nav").find("li").eq(3).find("a").click();
+        cy.get("nav").find("li").eq(4).find("a").click();
     });
 
     describe('render test', () => {

@@ -20,13 +20,12 @@ describe("Now playing Page ", () => {
   })
   beforeEach(() => {
     cy.visit("/")
-    cy.get('.dropdown-content').invoke('attr', 'style', 'display: block')
-    cy.get('.dropdown-content').find('a').eq(0).click()
+    cy.get("nav").find("li").eq(3).find("a").click();
   });
   
     describe("Base test", () => {
       it("displays page header", () => {
-        cy.get("h2").contains("Discover Movies");
+        cy.get("h2").contains("Now Playing Movies");
         cy.get(".badge").contains(20);
       });
     })
