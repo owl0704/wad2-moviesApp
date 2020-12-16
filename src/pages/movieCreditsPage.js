@@ -1,7 +1,8 @@
 import React from "react";
+import PageTemplate from "../components/templateMoviePage";
 import MovieCredits from "../components/movieCredits";
 import useMovie from "../hooks/useMovie";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 const movieCredits = props => {
   const { id } = props.match.params;
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -9,17 +10,11 @@ const movieCredits = props => {
   
   return (
     <>
-    <div className="row">
-        <div className="col-2">
-          <button onClick={() => props.history.goBack()}>
-            <FontAwesomeIcon icon={["fas", "arrow-circle-left"]} size="2x" />
-            <span>{" Back"}</span>
-          </button>
-        </div>
-      </div>
     {movie ? (
       <>
+      <PageTemplate movie={movie}>
         <MovieCredits movie={movie} /> 
+      </PageTemplate>
       </>
       ) : (
         <p>Waiting for movie details</p>
@@ -29,4 +24,3 @@ const movieCredits = props => {
 };
 
 export default movieCredits;
-
