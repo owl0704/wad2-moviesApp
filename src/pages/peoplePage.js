@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import PageTemplate from '../components/templatePeopleListPage'
+import PageTemplate from '../components/templatepeopleListPage'
 import { PeoplesContext } from "../contexts/peoplesContext";
 
 const PeopleListPage = () => {
