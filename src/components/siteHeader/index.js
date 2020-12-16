@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../../globals/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./siteHeader.css";
-import { Button } from 'antd';
+
 
 const SiteHeader = () => {
   return (
@@ -29,35 +29,35 @@ const SiteHeader = () => {
       <nav className="navbar navbar-expand ">
         <ul className="navbar-nav">
           <li className="nav-item">
-          <Button ghost><Link className="nav-link text-white" to="/">
+          <Link className="nav-link text-white" to="/">
               Home
             </Link>
-            </Button>
+         
           </li>
           <li className="nav-item">
-          <Button ghost><Link className="nav-link text-white" to="/movies/favorites">
+         <Link className="nav-link text-white" to="/movies/favorites">
               Favorites
             </Link>
-            </Button>
+            
           </li>
           <li className="nav-item">
-          <Button ghost><Link className="nav-link text-white" to="/movies/upcoming">
+          <Link className="nav-link text-white" to="/movies/upcoming">
               Upcoming
             </Link>
-            </Button>
+           
           </li>
          
           <li className="nav-item">
-            <Button ghost><Link className="nav-link text-white" to="/movies/Now_playing">
+            <Link className="nav-link text-white" to="/movies/Now_playing">
               Now Playing
             </Link>
-            </Button>
+           
           </li>
           <li className="nav-item">
-            <Button ghost><Link className="nav-link text-white" to="/people">
+          <Link className="nav-link text-white" to="/people">
               credits
             </Link>
-            </Button>
+           
           </li>
           <li className="nav-item">
             <Link className="nav-link text-white" to="/movies/user">

@@ -66,7 +66,7 @@ const App = () => {
 };
 
 ReactDOM.render(
-  <suspense fallback={<h3>loading...</h3>}>
+  <Suspense fallback={<h3>loading...</h3>}>
 <App/>
-  </suspense>,
-document,getElementById("root"));
+  </Suspense>,
+document.getElementById("root"));

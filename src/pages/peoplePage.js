@@ -14,9 +14,7 @@ const PeopleListPage = () => {
     <PageTemplate
       title='Popular People'
       peoples={peoples}
-      action={(people) => {
-       
-      }}
+     
     />
   );
 };
