@@ -19,7 +19,7 @@ export default function User() {
     }
 
     return (
-        <>user
+        <>
             <Card>
                 <Card.Body>
                     <h2 className="text-center mb-4" id="profile">User</h2>
